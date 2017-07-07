@@ -9,10 +9,19 @@ public class lx7
 //		char bb;
 //		bb=(char)B;
 //		System.out.println(bb);
-		int s='b'+13;
-		char d=(char)s;
-		System.out.println(d);
+//		int s='b'+13;
+//		char d=(char)s;
+//		System.out.println(d);
+		String l="刘德华";
+		String m="就是我";
+		String n=m+l;
+		System.out.println(n);
 				
+//		int l=40;
+//		int m=100;
+//		System.out.println(l+m+","+l+m);
+//		
+		
 		
 	}
 }
