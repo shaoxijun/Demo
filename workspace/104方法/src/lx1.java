@@ -71,6 +71,7 @@ public class lx1
 //		如果n偶数，打印1/2+1/4+1/6...1/n
 //		如果n奇数，打印1/2+1/5+1/7...1/n
 		
+//		print12(15);
 		
 		
 		
@@ -80,12 +81,19 @@ public class lx1
 //		如果n偶数，打印1/2+1/4+1/6...1/n，返回结果
 //		如果n奇数，打印1/2+1/5+1/7...1/n，返回结果
 		
+//		System.out.println(print13(12));;
 		
 		
+//		14.传入N,jisuan 1+2+...+n的结果
+		
+//		System.out.println(print14(5));
+		
+//		15传入N，计算1*2*...*n的计算结果
+		
+//		System.out.println(print15(5));
 		
 		
-		
-//		14.编写一个求绝对值方法abs(),使用重载满足各种类型的数据求绝对值
+//		16.编写一个求绝对值方法abs(),使用重载满足各种类型的数据求绝对值
 //		System.out.println(abs(-1));
 //		System.out.println(abs(-1l));
 //		System.out.println(abs(-1.0));
@@ -103,7 +111,67 @@ public class lx1
 //		System.out.println((int)(-16*Math.random())+((int)(17*Math.random())+1));
 //		System.out.println(((int)(-110*Math.random()))*0.1+((int)(460*Math.random()))*0.1);
 		
+//		54张牌，每张牌都随机，概率为五十四分之一
+		int a=(int)(54*Math.random()+1);
+		if(a<=10)//红心
+		{
+			System.out.println("红心"+a);
+		}
+		else if(a<=13)
+		{
+			if(a==11) {System.out.println("红心j");}
+			else if(a==12) {System.out.println("红心Q");}
+			else if(a==11) {System.out.println("红心K");}
+		}
+		if(a<=23)//方片
+		{
+			for(int i=14;i<=23;i++)
+			{
+				int j=1;
+				j++;
+				if(a==i) {System.out.println("方片"+j);}
+			}
+		}
+		if(a<=26)
+		{
+			if(a==24) {System.out.println("方片j");}
+			else if(a==25) {System.out.println("方片Q");}
+			else if(a==26) {System.out.println("方片K");}
+		}
 		
+		if(a<=36)//草花
+		{
+			for(int i=27;i<=36;i++)
+			{
+				int j=1;
+				j++;
+				if(a==i) {System.out.println("草花"+j);}
+			}
+		}
+		if(a<=39)
+		{
+			if(a==37) {System.out.println("草花j");}
+			else if(a==38) {System.out.println("草花Q");}
+			else if(a==39) {System.out.println("草花K");}
+		}
+		
+		if(a<=49)//黑桃
+		{
+			for(int i=40;i<=49;i++)
+			{
+				int j=1;
+				j++;
+				if(a==i) {System.out.println("黑桃"+j);}
+			}
+		}
+		if(a<=52)
+		{
+			if(a==50) {System.out.println("黑桃j");}
+			else if(a==51) {System.out.println("黑桃Q");}
+			else if(a==52) {System.out.println("黑桃K");}
+		}
+		if(a==53) {System.out.println("大王");}
+		if(a==54)		{System.out.println("小王");}
 	}
 	
 	
@@ -186,8 +254,25 @@ public class lx1
 		{
 			for(int i=2;i<=n;i+=2)
 			{
-				System.out.println(1/n+"+");
+				System.out.print("1/"+i);
+				if(i<n)
+				{
+					System.out.print("+");
+				}
 			}
+			
+		}
+		else
+		{
+			for(int i=3;i<=n;i+=2)
+			{
+				System.out.print("1/"+i);
+				if(i<n)
+				{
+					System.out.print("+");
+				}
+			}
+		
 		}
 	}
 	
@@ -197,7 +282,64 @@ public class lx1
 //	13.传入n(n>1)
 //	如果n偶数，打印1/2+1/4+1/6...1/n，返回结果
 //	如果n奇数，打印1/2+1/5+1/7...1/n，返回结果
-//	14.编写一个求绝对值方法abs(),使用重载满足各种类型的数据求绝对值
+	static double print13 (int n)
+	{
+		double result=0;
+		if(n%2==0)
+		{
+			for(int i=2;i<=n;i+=2)
+			{
+				result+=(double)1/(double)i;
+				System.out.print("1/"+i);
+				if(i<n)
+				{
+					System.out.print("+");
+				}
+			}
+			System.out.print("=");
+			
+		}
+		else
+		{
+			for(int i=3;i<=n;i+=2)
+			{
+				result+=(double)1/(double)i;
+				System.out.print("1/"+i);
+				if(i<n)
+				{
+					System.out.print("+");
+				}
+			}
+			System.out.print("=");		
+		}
+		return result;
+	}
+//	14.传入N,计算 1+2+...+n的结果
+	static int print14(int a)
+	{
+		int result=0;
+		for(int i=1;i<=a;i++)
+		{
+			result+=i;
+		}
+		return result;
+	}
+	
+	
+	
+//	15传入N，计算1*2*...*n的计算结果
+	static int print15(int a)
+	{
+		int result=1;
+		for(int i=1;i<=a;i++)
+		{
+			result*=i;
+		}
+		return result;
+	}
+	
+	
+//	16.编写一个求绝对值方法abs(),使用重载满足各种类型的数据求绝对值
 	static int abs(int x)
 	{
 		return x<0?-x:x;
