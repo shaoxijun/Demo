@@ -113,21 +113,24 @@ public class lx1
 		
 //		54张牌，每张牌都随机，概率为五十四分之一
 		int a=(int)(54*Math.random()+1);
-		if(a<=10)//红心
+		if(a>1&a<=10)//红心
 		{
+			
 			System.out.println("红心"+a);
 		}
 		else if(a<=13)
 		{
-			if(a==11) {System.out.println("红心j");}
+			if(a==1) {System.out.println("红心A");}
+			else if(a==11) {System.out.println("红心j");}
 			else if(a==12) {System.out.println("红心Q");}
 			else if(a==11) {System.out.println("红心K");}
 		}
 		if(a<=23)//方片
 		{
-			for(int i=14;i<=23;i++)
+			if(a==14) {System.out.println("方片A");}
+			for(int i=15;i<=23;i++)
 			{
-				int j=1;
+				int j=2;
 				j++;
 				if(a==i) {System.out.println("方片"+j);}
 			}
@@ -141,9 +144,10 @@ public class lx1
 		
 		if(a<=36)//草花
 		{
-			for(int i=27;i<=36;i++)
+			if(a==27) {System.out.println("草花A");}
+			for(int i=28;i<=36;i++)
 			{
-				int j=1;
+				int j=2;
 				j++;
 				if(a==i) {System.out.println("草花"+j);}
 			}
@@ -157,9 +161,10 @@ public class lx1
 		
 		if(a<=49)//黑桃
 		{
-			for(int i=40;i<=49;i++)
+			if(a==40) {System.out.println("黑桃A");}
+			for(int i=41;i<=49;i++)
 			{
-				int j=1;
+				int j=2;
 				j++;
 				if(a==i) {System.out.println("黑桃"+j);}
 			}
