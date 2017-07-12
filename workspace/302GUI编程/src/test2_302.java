@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class test2 extends JFrame
+public class test2_302 extends JFrame
 {
 
 	private JPanel contentPane;
@@ -29,7 +29,7 @@ public class test2 extends JFrame
 			{
 				try
 				{
-					test2 frame = new test2();
+					test2_302 frame = new test2_302();
 					frame.setVisible(true);
 				} catch (Exception e)
 				{
@@ -42,7 +42,7 @@ public class test2 extends JFrame
 	/**
 	 * Create the frame.
 	 */
-	public test2()
+	public test2_302()
 	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 325);

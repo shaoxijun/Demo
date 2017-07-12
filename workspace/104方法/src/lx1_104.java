@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class lx1
+public class lx1_104
 {
 
 	public static void main(String[] args)
@@ -113,9 +113,9 @@ public class lx1
 		
 //		54张牌，每张牌都随机，概率为五十四分之一
 		int a=(int)(54*Math.random()+1);
+		System.out.println(a);
 		if(a>1&a<=10)//红心
-		{
-			
+		{			
 			System.out.println("红心"+a);
 		}
 		else if(a<=13)
@@ -140,8 +140,7 @@ public class lx1
 			if(a==24) {System.out.println("方片j");}
 			else if(a==25) {System.out.println("方片Q");}
 			else if(a==26) {System.out.println("方片K");}
-		}
-		
+		}		
 		if(a<=36)//草花
 		{
 			if(a==27) {System.out.println("草花A");}
@@ -157,8 +156,7 @@ public class lx1
 			if(a==37) {System.out.println("草花j");}
 			else if(a==38) {System.out.println("草花Q");}
 			else if(a==39) {System.out.println("草花K");}
-		}
-		
+		}		
 		if(a<=49)//黑桃
 		{
 			if(a==40) {System.out.println("黑桃A");}
