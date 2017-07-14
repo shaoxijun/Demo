@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class test
 {
-	static final int N=20;
+	static final int N=10;
 	static int[][] chess = new int[N][N];
 	static Scanner sc=new Scanner(System.in);
 	static boolean black=true;

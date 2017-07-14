@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class 五子棋
 {
-	static final int N=20;
+	static final int N=14;
 	static int[][] chess = new int[N][N];
 	static Scanner sc=new Scanner(System.in);
 	static boolean black=true;
@@ -271,7 +271,7 @@ public class 五子棋
 		}
 		if(zs+yx>=4)
 		{win=black?2:1;}
-		//检查左上，右下
+		//检查右上，左下
 		int zx=0,ys=0;
 		//b=x,a=y
 		if(b<5)
@@ -374,7 +374,7 @@ public class 五子棋
 				}
 			}			
 		}
-		if(zs+yx>=4)
+		if(zx+ys>=4)
 		{win=black?2:1;}	
 	}		
 	
