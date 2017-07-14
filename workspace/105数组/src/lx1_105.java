@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-public class test_105
+public class lx1_105
 {
 
 	public static void main(String[] args)
