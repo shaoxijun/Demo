@@ -69,7 +69,7 @@ public class lx2_105
 					arr[i]=arr[i+1];
 					arr[i+1]=tmp;
 				}
-//				System.out.println(Arrays.toString(arr));
+
 				}
 		}	
 		System.out.println(Arrays.toString(arr));
@@ -86,7 +86,7 @@ public class lx2_105
 				arr[0]=arr[j+1];
 				arr[j+1]=tmp;
 			}
-//			System.out.println(Arrays.toString(arr));
+
 		}
 	}
 }
