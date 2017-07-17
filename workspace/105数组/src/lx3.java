@@ -6,14 +6,14 @@ public class lx3
 	{
 		int[] array= {10,50,30,3};
 		//打印传入的数组  比如输出[10,20,30]
-		System.out.println(Arrays.toString(array));
+//		System.out.println(Arrays.toString(array));
 		//复制数组的方法（传入  源数组  起始位置 目标数组， 复制到起始位置  复制的长度）
-		int[] ar = array;
-		System.arraycopy(array, 0, ar, 0, 4);
+//		int[] ar = array;
+//		System.arraycopy(array, 0, ar, 0, 4);
 		//将传入的数组进行冒泡排序		
-		bubll(array);
+//		bubll(array);
 		//将传入的数组进行选择排序
-		choose(array);
+//		choose(array);
 		//将传入的数组颠倒排序
 		dao(array);
 		//传入数组，将位置1位置2的数据交换
@@ -27,18 +27,17 @@ public class lx3
 	
 	static void dao(int[] arr)
 	{
-		for(int j=arr.length;j<=1;j--)
+		for(int j=arr.length;j>=1;j--)
 		{	
-			for(int i=arr.length;i<=1;i--)
+			for(int i=arr.length-1;i>=1;i--)
 			{
 				int tmp=arr[i];
-				if(arr[i]<arr[i-1])
+				if(arr[i]>arr[i-1])
 				{
 					arr[i-1]=arr[i];
 					arr[i]=tmp;
 				}
-
-				}
+			}
 		}	
 		System.out.println(Arrays.toString(arr));
 	}
@@ -50,7 +49,7 @@ public class lx3
 			for(int i=0;i<arr.length-1-j;i++)
 			{
 				int tmp=arr[i];
-				if(arr[i]>arr[i+1])
+				if(arr[i]<arr[i+1])
 				{
 					arr[i]=arr[i+1];
 					arr[i+1]=tmp;

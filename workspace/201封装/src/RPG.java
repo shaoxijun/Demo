@@ -30,6 +30,8 @@ public class RPG
 	{
 		System.out.println("8 2 4 6分别表示上 下 左 右 ，请选择需要的操作");
 		int i = sc.nextInt();
+		if(x>=0&&x<=SIZE&&y>=0&&y<=SIZE)
+		{	
 		switch (i)
 		{
 			case 8:
@@ -47,6 +49,7 @@ public class RPG
 			default:
 				System.out.println("输入错误");
 				
+		}
 		}
 	}
 	

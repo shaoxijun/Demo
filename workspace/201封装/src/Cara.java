@@ -1,5 +1,5 @@
 
-public class Car
+public class Cara
 {
 	// 2. 定义一个车Car类
 	// 特性:品牌 型号 颜色 车牌 价格
@@ -17,5 +17,10 @@ public class Car
 	void drive()
 	{
 		System.out.println("我特么开车贼厉害");
+	}
+	public Cara()
+	{
+		
+		
 	}
 }
