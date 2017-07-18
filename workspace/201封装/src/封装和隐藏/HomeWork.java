@@ -76,7 +76,7 @@ public class HomeWork
 //		c.print(); // 打印输出35
 //		c.clear(); // 清0
 //		c.print(); // 打印输出0
-		AddressCard ac = new AddressCard("刘德华",1315447854);
+		AddressCard ac = new AddressCard("刘德华","13164578741");
 		System.out.println(ac);
 		
 	}
