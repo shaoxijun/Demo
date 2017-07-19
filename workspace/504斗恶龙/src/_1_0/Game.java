@@ -2,7 +2,7 @@ package _1_0;
 
 import java.util.Scanner;
 
-import _1_2.Monster;
+import _1_3.Monster;
 
 public class Game
 {
@@ -13,7 +13,7 @@ public class Game
 	Monster m1;
 	Monster m2;
 	Monster m3;
-	static final int N = 10;
+	public int N = 10;
 	Scanner sc = new Scanner(System.in);
 	
 	 Game()
@@ -33,11 +33,11 @@ public class Game
 			controlHero();
 			if(win)
 			{System.out.println("游戏成功");break;}	
-			ps.psmove(ps.direction());
-			m1.monMove(m1.direction());
-			m2.monMove(m2.direction());
-			m3.monMove(m3.direction());
-			if(lose)
+//			ps.psmove(ps.direction());
+//			m1.monMove(m1.direction());
+//			m2.monMove(m2.direction());
+//			m3.monMove(m3.direction());
+//			if(lose)
 			{System.out.println("游戏失败，你被猪吃了");break;}
 			
 			

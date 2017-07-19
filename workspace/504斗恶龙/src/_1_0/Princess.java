@@ -1,6 +1,6 @@
 package _1_0;
 
-import _1_2.Monster;
+import _1_3.Monster;
 
 public class Princess
 {
@@ -14,10 +14,10 @@ public class Princess
 	}
 	
 	
-	Hero hero ;
-	Monster m1;
-	Monster m2;
-	Monster m3;
+//	Hero hero ;
+//	Monster m1;
+//	Monster m2;
+//	Monster m3;
 	public String getName()
 	{
 		return name;
