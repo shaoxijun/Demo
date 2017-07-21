@@ -38,21 +38,21 @@ public class lx2_105
 				}
 			}
 		}
-		//交换变量的方法
-		int a=1,b=3;
-		//方法一
-		int tmp;
-		tmp=a;
-		a=b;
-		b=tmp;
-		//方法二
-		a=a+b;
-		b=a-b;
-		a=a-b;
-		//方法三
-		a=a^b;
-		b=b^a;
-		a=a^b;
+//		//交换变量的方法
+//		int a=1,b=3;
+//		//方法一
+//		int tmp;
+//		tmp=a;
+//		a=b;
+//		b=tmp;
+//		//方法二
+//		a=a+b;
+//		b=a-b;
+//		a=a-b;
+//		//方法三
+//		a=a^b;
+//		b=b^a;
+//		a=a^b;
 		
 	}
 	

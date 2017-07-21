@@ -21,6 +21,7 @@ public class Test
 //		{
 //				a[i].sing(a[i]);
 //		}
+		
 //		 Card c = new Card();
 //				 c.id = "1234123423423423";
 //				 c.password = "123456";
@@ -28,13 +29,13 @@ public class Test
 //				 c.print();
 //				 c.saveMoney(1000);
 //				 c.print();// 当前余额2000
-//				 c.takeMoney(500);
-//				 c.print();// 当前余额1500
-//				 c.takeMoney(10000);// 提示:当前余额不足
-//				 c.print();// 当前余额1500
-				
-//				 CreditCard c2 = new CreditCard();
-//				 c2.id = "1234123423423423";
+//	 		 	 c.takeMoney(500);
+//	 			 c.print();// 当前余额1500
+//		 	   	 c.takeMoney(10000);// 提示:当前余额不足
+//		 		 c.print();// 当前余额1500
+//				
+//			     CreditCard c2 = new CreditCard();
+//			     c2.id = "1234123423423423";
 //				 c2.password = "123456";
 //				 c2.money = 0;
 //				 c2.credit = 5000;
@@ -48,8 +49,7 @@ public class Test
 //				 c2.saveMoney(1000);
 //				 c2.print();// 当前余额1000
 
-//		Square s = new Square(3,3);
-		
+//		Square s = new Square(3,3);		
 //		PlayRole[] pr = new PlayRole[6];
 //		Hero hero = new Hero("刘德华",(int)(Math.random()*10),(int)(Math.random()*10));
 //		Princess ps = new Princess("刘亦菲",(int)(Math.random()*10),(int)(Math.random()*10));
@@ -68,8 +68,8 @@ public class Test
 //			pr[i].print(pr[i]);
 //		}
 		
-//		Shape s = new Square(3,3);
-//		Shape r = new Rectangle(6,4);
+//		Shape s = new Square(3);
+//		Shape r = new Rectangle(4,4);		
 //		s.area();
 //		s.round();
 //		r.area();
@@ -80,33 +80,31 @@ public class Test
 //		Student s2 =new Student("liuyifei",22,"12345");
 //		if(s1.equals(s2))
 //		{System.out.println("ok");}
+//		
 		
-		
-		Person[] p = new Person[4];
-		p[0] = new Student("liudehua",3,"12345");
-		p[1] = new Student("liuyifei",4,"22345");
-		p[2] = new Student("liuluoguo",2,"32345");
-		p[3] = new Teather("huangjun",3,2);
-		for(int i=0;i<p.length;i++)
-		{
-			p[i].eat();
-			p[i].sleep();
-			if(p[i].getClass() == Student.class)
-			{
-				Student s = (Student)p[i];
-				s.listenLesson();
-				s.code();
-				s.LOL();
-			}
-			if(p[i].getClass() == Teather.class)
-			{
-				Teather t = (Teather)p[i];
-				t.teach();
-				t.code();
-			}
-			
-			
-		}
+//		Person[] p = new Person[4];
+//		p[0] = new Student("liudehua",3,"12345");
+//		p[1] = new Student("liuyifei",4,"22345");
+//		p[2] = new Student("liuluoguo",2,"32345");
+//		p[3] = new Teather("huangjun",3,2);
+//		for(int i=0;i<p.length;i++)
+//		{
+//			p[i].eat();
+//			p[i].sleep();
+//			if(p[i].getClass() == Student.class)
+//			{
+//				Student s = (Student)p[i];
+//				s.listenLesson();
+//				s.code();
+//				s.LOL();
+//			}
+//			if(p[i].getClass() == Teather.class)
+//			{
+//				Teather t = (Teather)p[i];
+//				t.teach();
+//				t.code();
+//			}
+//		}
 	}
 
 }

@@ -5,9 +5,15 @@ public class Square extends Shape
 
 	public Square(int l, int k)
 	{
-		super(l, k);		
+		super(l, k);
+	
 	}
-
+	public Square(int l)
+	{
+		this(l,l);
+	}
+	public Square()
+	{}
 	@Override
 	void area()
 	{

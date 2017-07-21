@@ -7,7 +7,8 @@ public class Rectangle extends Shape
 		super(l, k);
 		// TODO Auto-generated constructor stub
 	}
-
+	public Rectangle()
+	{}
 	@Override
 	void area()
 	{

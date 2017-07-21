@@ -4,6 +4,8 @@ public abstract class Shape
 {
 	int l;
 	int k;
+	public Shape()
+	{}
 	public Shape(int l, int k)
 	{
 		super();

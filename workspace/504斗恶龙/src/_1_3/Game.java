@@ -18,8 +18,8 @@ public class Game
 	 Game()
 	{
 		Hero hero = new Hero("ÁõµÂ»ª",5,5);
-		PlayRole ps = new Princess("ÁõÒà·Æ",3,6);
-		PlayRole[] monster = new Monster[3];
+		Princess ps = new Princess("ÁõÒà·Æ",3,6);
+		Monster[] monster = new Monster[3];
 		for(int i=0;i<monster.length;i++)
 		{
 			monster[i] = new Monster("Ò°Öí",(int)(Math.random()*4),(int)(Math.random()*4));
@@ -56,11 +56,11 @@ public class Game
 
 	int checkWin()
 	{
-		if(hero.getX()==ps.getX()&&hero.getY()==ps.getY())
+		if(hero.x==ps.x&&hero.y==ps.y)
 		{return 1;}
 		for(int i=0;i<monster.length;i++)
 		{
-			if(monster[i].getX()==hero.getX()&&monster[i].getY()==hero.getY())
+			if(monster[i].x==hero.x&&monster[i].y==hero.y)
 			{return -1;}
 		}
 		return 0;
@@ -78,11 +78,11 @@ public class Game
 	void printMap()
 	{
 		int[][] map = new int [N][N];		
-		map[hero.getX()][hero.getY()] = 1;
-		map[ps.getX()][ps.getY()] = 2;
+		map[hero.x][hero.y] = 1;
+		map[ps.x][ps.x] = 2;
 		for(int i=0;i<monster.length;i++)
 		{
-			map[monster[i].getX()][monster[i].getY()]=0;
+			map[monster[i].x][monster[i].y]=0;
 		}
 		for(int i=0;i<N;i++)
 		{

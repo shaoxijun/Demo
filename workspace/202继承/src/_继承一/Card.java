@@ -3,7 +3,7 @@ package _¼Ì³ÐÒ»;
 
 public class Card
 {
-	int money;
+	public int money;
 	String id;
 	String password;
 	public Card()
@@ -17,11 +17,19 @@ public class Card
 	}
 	void saveMoney(int i)
 	{
+		System.out.println("´æ"+i);
+
 		this.money +=i;
 	}
 	void takeMoney(int i)
 	{
+		System.out.println("È¡"+i);
+		if(money>=i)
+		{
 		this.money -=i;
+		}
+		else
+		{System.out.println("Óà¶î²»×ã");}
 	}
 	void print()
 	{
