@@ -1,11 +1,36 @@
-package _1_3;
+package 实例内部类;
 
-import java.util.Scanner;
-
-import _1_3.Monster;
+import java.util.*;
 
 public class Game
 {
+	class Hero extends PlayRole
+	{
+		public Hero(String name, int i, int j)
+		{
+			// TODO Auto-generated constructor stub
+			this.setX(i);
+			this.setY(j);
+		}
+	}
+	class Princess extends PlayRole
+	{
+		public Princess(String name, int i, int j)
+		{
+			// TODO Auto-generated constructor stub
+			this.setX(i);
+			this.setY(j);
+		}
+	}
+	class Monster extends PlayRole
+	{
+		public Monster(String name, int i, int j)
+		{
+			// TODO Auto-generated constructor stub
+			this.setX(i);
+			this.setY(j);
+		}
+	}
 	boolean win = false;
 	boolean lose = false;
 	Hero hero;
@@ -40,6 +65,19 @@ public class Game
 				break;
 			}
 			ps.randomMove((int)(Math.random()*4));
+			
+			
+			int dx = hero.getX() - ps.getX();
+			int dy = hero.getY() - ps.getY();
+			if(dx<0)
+			{dx = -dx;}
+			if(dy<0)
+			{dy = -dy;}
+			int dxy = dx + dy;
+			System.out.println("英雄快来救我，你的坐标是"+hero.getX()+","+hero.getY()
+								+",我的坐标是："+ps.getX()+","+ps.getY()+", 距离还有"+dxy+"步");
+			
+			
 			for(int i=0;i<monster.length;i++)
 			{
 				monster[i].randomMove((int)(Math.random()*4));
@@ -108,5 +146,9 @@ public class Game
 			System.out.println();
 		}
 	}
-	
+	public static void main(String[] args)
+	{
+		Game g = new Game();
+		g.play();
+	}
 }

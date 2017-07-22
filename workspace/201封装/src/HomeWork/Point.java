@@ -26,6 +26,13 @@ public class Point
 		this.x = x;
 		this.y = y;
 	}
+	public Point(Point p)
+	{
+		this.x = p.x;
+		this.y = p.y;
+//		this.setX(p.getX());
+//		this.setY(p.getY());
+	}
 	public Point()
 	{
 		super();

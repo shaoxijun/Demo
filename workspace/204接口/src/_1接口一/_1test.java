@@ -42,19 +42,19 @@ public class _1test
 		
 		
 		//修空调
-//		Person p1 = new Person();
-//		p1.name = "小明";
-//		Prefession pp = new Prefession();
-//		pp.name = "专业修理工";
-//		Aircondition air = new Aircondition();
-//		air.setDegree(0);
-//		air.r1 = p1;
-//		air.r2 = pp;
-//		for(int i=0;i<=5;i++)
-//		{
-//			int a = (int)(100*Math.random());
-//			air.setDegree(a+1);
-//		}
+		Person p1 = new Person();
+		p1.name = "小明";
+		Prefession pp = new Prefession();
+		pp.name = "专业修理工";
+		Aircondition air = new Aircondition();
+		air.setDegree(0);
+		air.r1 = p1;
+		air.r2 = pp;
+		for(int i=0;i<=5;i++)
+		{
+			int a = (int)(100*Math.random());
+			air.setDegree(a+1);
+		}
 		
 		
 		

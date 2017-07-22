@@ -1,4 +1,4 @@
-package _1_3;
+package 实例内部类;
 
 public abstract class PlayRole
 {
