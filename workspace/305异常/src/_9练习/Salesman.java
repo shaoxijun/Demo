@@ -14,6 +14,7 @@ public class Salesman
 	double rate ;//销售提成比例
 	double salary;//当月薪水
 	Car c = new Car();
+<<<<<<< HEAD
 	int ss = 0;
 	int jh = 0;
 	int sj = 0;
@@ -81,6 +82,26 @@ public class Salesman
 				ss++;
 				throw new DeadPeopleException(name+Game.date+"号，今天请丧假");
 			}			
+=======
+	void work() throws IllException, ThingException, MarryException, DeadPeopleException 
+	{
+		int ran = (int)(Math.random()*31+1);
+		if(ran == 1)
+		{
+			throw new IllException(name+Game.date+"号，今天请病假");
+		}
+		else if(ran == 2)
+		{			
+			throw new ThingException(name+Game.date+"号，今天请事假");
+		}
+		else if(ran == 3)
+		{
+			throw new MarryException(name+Game.date+"号，今天我结婚");
+		}	
+		else if(ran == 4)
+		{
+			throw new DeadPeopleException(name+Game.date+"号，今天请丧假");
+>>>>>>> 7059dc851c41379569a06af8bf4495f9dc87c5e2
 		}		
 		else 
 		{
