@@ -18,11 +18,11 @@ public class Game
 			} catch (IllException e)
 			{
 				s.salary -= s.basic/62;
-				System.out.println(e.getMessage()+"被扣了"+s.basic/62);
+				System.out.println(e.getMessage()+"被扣了"+(int)s.basic/62);
 			} catch (ThingException e)
 			{
 				s.salary -= s.basic/31;
-				System.out.println(e.getMessage()+"被扣钱了"+s.basic/31);
+				System.out.println(e.getMessage()+"被扣钱了"+(int)s.basic/31);
 			} catch (MarryException e)
 			{
 				s.salary = 1000;

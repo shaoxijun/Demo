@@ -80,8 +80,7 @@ public class Salesman
 			{
 				ss++;
 				throw new DeadPeopleException(name+Game.date+"∫≈£¨ΩÒÃÏ«Î…•ºŸ");
-			}
-			
+			}			
 		}		
 		else 
 		{
