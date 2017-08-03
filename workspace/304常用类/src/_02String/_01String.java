@@ -81,41 +81,6 @@ public class _01String
 			}
 		}
 		System.out.println();
-	// *6. 编写一个方法，将数字转化成中文金额大写字符串
-	// 传入的是125，返回的是"壹佰贰拾伍元整"
-	// 传入的是比如125.25，返回的是"壹佰贰拾伍元贰角伍分"
-	// 中文大写金额数字应用正楷或行书填写,如壹、贰、叁、肆、伍、陆、柒、捌、玖、拾、佰、 仟、万、亿、元、角、分、零、整(正)等字
-		System.out.println("你输入的数是：");
-		String a6 = sc.next();
-		char[] arr6a = a5.toCharArray();
-		char[] arr6b = new char[]{'零','壹','贰','叁','肆','伍','陆','柒','捌','玖'};
-		char[] arr6c = new char[]{'整','拾','佰','仟','万','亿','元','角','分'};
-		char[] arr6d = new char[]{'0','1','2','3','4','5','6','7','8','9','.'};
-		int d = 0;
-		for(int i =0;i<arr6a.length;i++)
-		{
-			if(arr6a[i] == '.')
-			{
-				d = i;
-				break;
-			}else
-			{
-				d = arr6a.length;
-			}
-		}
-		if(d == arr6a.length)
-		{
-			for(int i =0;i<d;i++)
-			{
-				for(int j =0;j<arr6d.length;j++)
-				{
-					
-				}
-			}
-		}else
-		{
-			
-		}
-	}
 
+	}
 }
