@@ -16,5 +16,6 @@ public class Test
 		s.basic = 3000;
 		s.rate = 0.02;
 		g.date(s);
+		
 	}
 }
