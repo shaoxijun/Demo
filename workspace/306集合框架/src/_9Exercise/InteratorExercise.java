@@ -91,15 +91,16 @@ public class InteratorExercise
 		a3.add(e4);
 		System.out.println(a3);
 		// 移除10001编号的员工 ,如果编号相同。认为是同一个人。
-		Iterator it3 = a3.iterator();
-		while(it3.hasNext())
-		{
-			Employee e = (Employee) it3.next();			
-			if(e.num == 10001)
-			{
-				it3.remove();
-			}
-		}
+		a3.remove(e1);
+//		Iterator it3 = a3.iterator();
+//		while(it3.hasNext())
+//		{
+//			Employee e = (Employee) it3.next();			
+//			if(e.num == 10001)
+//			{
+//				it3.remove();
+//			}
+//		}
 		System.out.println(a3);
 
 	}

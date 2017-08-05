@@ -1,6 +1,6 @@
 package _9Exercise;
 
-public class Student
+public class Student implements Comparable
 {
 	// 6. 定义一个Student类，并使用List容器存放以下数据
 	// 学号 名字 英语 数学 语文
@@ -10,8 +10,97 @@ public class Student
 	// 10004 赵六 87 86 75
 	// 10005 小乔 29 100 98
 	// 10006 曹操 87 65 100
-	// 1. 使用多种方式遍历该容器内元素，并打印
-	// 2. 查询打印赵六的成绩
-	// 3. 移除王五
-	// 4. 曹操因为作弊被抓，修改曹操的数学成绩为0分
+	int num;
+	String name;
+	int english;
+	int math;
+	int chinese;
+	public Student(int num, String name, int english, int math, int chinese)
+	{
+		super();
+		this.num = num;
+		this.name = name;
+		this.english = english;
+		this.math = math;
+		this.chinese = chinese;
+	}
+	public Student()
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString()
+	{
+		return  num + ", 姓名" + name + ", 英语=" + english + ", 数学=" + math + ", 语文="
+				+ chinese ;
+	}
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + num;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		if (num != other.num)
+			return false;
+		return true;
+	}
+
+	@Override
+	public int compareTo(Object a)
+	{
+		Student s = (Student)a;
+		int ssum = s.chinese+s.math+s.english;
+		int tsum = this.chinese+this.math+this.english;
+		if(ssum > tsum)
+		{
+			return 1;
+		}else if(ssum < tsum)
+		{
+			return -1;
+		}else
+		{
+			if(s.chinese > this.chinese)
+			{
+				return 1;
+			}else if(s.chinese < this.chinese)
+			{
+				return -1;
+			}else
+			{
+				if(s.math > this.math)
+				{
+					return 1;
+				}else if(s.math < this.math)
+				{
+					return -1;
+				}else
+				{
+					if(s.num > this.num)
+					{
+						return 1;
+					}else if(s.num < this.num)
+					{
+						return -1;
+					}else
+					{
+						return 0;
+					}
+				}
+			}
+		}
+	}
+	
 }
