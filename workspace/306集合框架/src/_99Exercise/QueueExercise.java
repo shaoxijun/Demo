@@ -1,4 +1,4 @@
-package _9Exercise;
+package _99Exercise;
 
 import java.util.*;
 
@@ -20,18 +20,18 @@ public class QueueExercise
 		// 7 编写一个医院、银行叫号系统
 		// 取号()
 		// 叫号()
-		System.out.println("每天规定只能叫20个顾客，多了走开");	
-		int a =0;
+		int a =20;
+		System.out.println("每天规定只能叫"+a+"个顾客，多了走开");	
 		while(true)
 		{
 				int ran = (int)(Math.random()*2);
-				Thread.sleep(1000);
+				Thread.sleep(300);
 				switch(ran)
 				{
 				case 0:
 					String t = "顾客取号,当前排队编号"+take()+"，您前面还有"+(d.peekLast()-d.peekFirst())+"位顾客在等待";
 					System.out.println(t);
-					a++;
+					a--;
 					break;
 				case 1:
 					if(d.peekFirst() == null)
@@ -46,7 +46,7 @@ public class QueueExercise
 					}
 				}
 				
-				if(a==20)
+				if(a==0)
 					break;
 		}
 		while(true)

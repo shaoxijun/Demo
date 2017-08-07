@@ -1,4 +1,4 @@
-package _2Iterator;
+package _02Iterator;
 
 public class Test
 {

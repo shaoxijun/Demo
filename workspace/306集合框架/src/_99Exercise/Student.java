@@ -1,4 +1,4 @@
-package _9Exercise;
+package _99Exercise;
 
 public class Student implements Comparable
 {
