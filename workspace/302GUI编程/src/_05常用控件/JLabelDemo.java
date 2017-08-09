@@ -8,10 +8,10 @@ public class JLabelDemo extends JFrame
 	public JLabelDemo()
 	{
 		JPanel p = new JPanel();
-		p.addMouseListener(null);
+		p.setLayout(null);
 		this.add(p);
 		JLabel  l1 = new JLabel("abc");
-		l1.setBounds(50,50,100,50);
+		l1.setBounds(0,0,50,50);
 		p.add(l1);
 		JLabel l2 = new JLabel();
 		ImageIcon icon = new ImageIcon("ren1.jpg");

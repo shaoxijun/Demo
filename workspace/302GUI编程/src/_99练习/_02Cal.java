@@ -5,7 +5,7 @@ import javax.swing.*;
 public class _02Cal extends JFrame	implements ActionListener
 {
 	JLabel label;
-	String ys = "s";
+	String ys = "";
 	String l1 = null,l2;
 	int a1=0,a2=0,a=0;
 	public _02Cal ()
@@ -47,9 +47,13 @@ public class _02Cal extends JFrame	implements ActionListener
 	{
 		// TODO Auto-generated method stub
 		String s =label.getText();
-		if(s.equals("0"))
+		if(ys != null)
 		{
-			label.setText(s.substring(1, s.length()));
+			label.setText(e.getActionCommand());
+		}
+		if(s.charAt(1) == '0')
+		{
+			label.setText(s.substring(2, s.length()));
 		}
 		
 		switch(e.getActionCommand())
@@ -74,44 +78,43 @@ public class _02Cal extends JFrame	implements ActionListener
 		case "+":
 			ys = "+";
 			a2 = a1;
-			label.setText("0");
 			break;
 		case "-":
 			ys = "-";
 			a2 = a1;
-			label.setText("0");
 			break;
 		case "*":
 			ys = "*";
 			a2 = a1;
-			label.setText("0");
 			break;
 		case "/":
 			ys = "/";
 			a2 = a1;
-			label.setText("0");
 			break;
 		case "=":
 			switch(ys)
 			{
 			case"+":
 				a = a1 + a2;
+				ys = "";
 				label.setText(a+" ");
 			break;
 			case"-":
 				a = a2 - a1;
+				ys = "";
 				label.setText(a+" ");
 			break;
 			case"*":
 				a = a1 * a2;
+				ys = "";
 				label.setText(a+" ");
 			break;
 			case"/":
 				a = a2 / a1;
+				ys = "";
 				label.setText(a+" ");
 			break;
 			}
 		}
-	
 	}
 }

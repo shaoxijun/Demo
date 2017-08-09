@@ -7,16 +7,17 @@ public class _03GuessFinger extends JFrame
 
 	public _03GuessFinger()
 	{
-		super();
+		
 		JPanel p = new JPanel();
+		p.setLayout(null);
 		this.add(p);
 		JLabel  l1 = new JLabel("1234");
-		l1.setBounds(0,0,10,10);
+		l1.setBounds(50, 70, 50, 50);
 		p.add(l1);
 		JLabel l2 = new JLabel();
 		ImageIcon icon = new ImageIcon("wang.gif");
 		l2.setIcon(icon);
-		l2.setBounds(30, 20, 30, 30);
+		l2.setBounds(150, 200, 250,217);
 		p.add(l2);
 			
 	}

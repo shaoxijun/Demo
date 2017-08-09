@@ -4,7 +4,8 @@ public class test
 {
 	public static void main(String[] args)
 	{		
-			abstract class Animal
+		
+		abstract class Animal
 			{
 				String name;
 				abstract void sing();
@@ -13,7 +14,6 @@ public class test
 			
 			class Dog extends Animal
 			{
-	
 				@Override
 				void sing()
 				{
