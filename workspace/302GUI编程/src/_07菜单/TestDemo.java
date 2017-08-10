@@ -12,7 +12,7 @@ public class TestDemo extends JFrame
 		// 1. 创建菜单栏
 		JMenuBar bar = new JMenuBar();
 		this.setJMenuBar(bar);
-
+		
 		// 2. 创建主菜单项
 		JMenu m1 = new JMenu("文件");
 		JMenu m2 = new JMenu("编辑");
