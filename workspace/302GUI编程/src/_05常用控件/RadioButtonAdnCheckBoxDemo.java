@@ -20,6 +20,28 @@ public class RadioButtonAdnCheckBoxDemo extends JFrame
 		p.add(female);
 		
 		//复选框
+		JCheckBox b1 = new JCheckBox("抽烟");
+		JCheckBox b2 = new JCheckBox("喝酒");
+		JCheckBox b3 = new JCheckBox("烫头发");
+		
+		p.add(b1);
+		p.add(b2);
+		p.add(b3);
+		
+		// 3. 
+		JButton btn = new JButton("确定");
+		btn.addActionListener(new ActionListener()
+		{
+			
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				// TODO Auto-generated method stub
+				JOptionPane.showMessageDialog(RadioButtonAdnCheckBoxDemo.this, "你输入性别"+(male.isSelected()?"男":"女"));
+			}
+		});
+		p.add(btn);
+
 		
 	}
 	public static void main(String[] args)

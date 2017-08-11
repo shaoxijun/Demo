@@ -42,6 +42,7 @@ public class TextFieldDemo extends JFrame
 			{
 				// TODO Auto-generated method stub
 				JOptionPane.showMessageDialog(TextFieldDemo.this, "ÄãÊäÈëµÄ"+t.getText()+"ÃÜÂë"+new String(pass.getPassword()));
+//				JOptionPane.showm
 			}
 		});
 		p.add(btn);

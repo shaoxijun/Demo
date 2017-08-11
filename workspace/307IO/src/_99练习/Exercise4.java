@@ -18,7 +18,7 @@ public class Exercise4
 		while(b != -1)
 		{
 			b = in.read(bt);
-			out.write(b);
+			out.write(bt,0,b);
 		}
 		long t2 = System.currentTimeMillis();
 		System.out.println(t2-t1);
@@ -27,10 +27,10 @@ public class Exercise4
 		
 		
 		b = 0;
-		bt = new byte[1024];
+//		byte aaa;
 		while(b != -1)
 		{
-			b = in1.read(bt);
+			b = in1.read();
 			out1.write(b);
 		}
 		in1.close();
