@@ -11,9 +11,9 @@ public class Exercise8
 		// 分别采用InputStream Reader RandomAccessFile三种方式读取一个文本文件a.txt
 		// 显示文件内容
 		
-//		read();//字节流
+		read();//字节流
 //		read1();
-		read2();
+//		read2();
 		
 	}
 
@@ -52,16 +52,15 @@ public class Exercise8
 	{
 		// TODO Auto-generated method stub
 		InputStream in = new FileInputStream("e:\\e6.txt");
-//		OutputStream out = new FileOutputStream("e:\\e6.txt");
 		int len = 0;
 		byte[] c = new byte[1024];
 		while(len != -1)
 		{
 			
 			len = in.read(c);
-//			System.out.println(len);
 			if(len>-1)
 			{		
+//				char[] ch = Arrays.b
 				String s = Arrays.toString(c);
 				System.out.println(s);
 			}

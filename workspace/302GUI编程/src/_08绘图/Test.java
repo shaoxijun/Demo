@@ -3,21 +3,21 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Test extends JFrame
+public class Test extends JFrame//Frame类
 {	
 	final static int N = 14;
 	final static int GRID = 40;
 	final static int MARGIN = 50;
 	
 	
-	public Test()
+	public Test()//Frame的构造方法
 	{
 		MyPanel p = new MyPanel();
 		p.setLayout(null);
 		this.add(p);
 	}
 	
-	public class MyPanel extends JPanel
+	public class MyPanel extends JPanel//JPanel类
 	{
 		MyPanel()
 		{
