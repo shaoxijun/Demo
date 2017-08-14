@@ -108,10 +108,10 @@ public class Test2 extends JFrame//Frame¿‡
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
-		Test2 f = new Test2();
-		f.setVisible(true);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		f.setBounds(100,50,620,650);
+//		Test2 f = new Test2();
+//		f.setVisible(true);
+//		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		f.setBounds(100,50,620,650);
 	}
 
 }
