@@ -10,6 +10,9 @@ public class GameFrame extends JFrame
 	{
 	
 		GamePanel myPanel = new GamePanel();
+		myPanel.setLayout(null);
+		
+	
 		this.add(myPanel);	
 	}
 
@@ -26,6 +29,7 @@ public class GameFrame extends JFrame
 		// f.setLocation(400,200);
 		// f.setSize(500, 400);
 		f.setBounds(300, 250, 500, 400);// 同时设置起始坐标和大小
+		
 	}
 
 }

@@ -198,6 +198,9 @@ public class _00Test
 			// 4.4 按照总分列出学生
 	public static void find4()
 	{
-		System.out.println(m);
+		for(long s:m.keySet())
+		{
+			System.out.println(" "+s+m.get(s));
+		}
 	}
 }
