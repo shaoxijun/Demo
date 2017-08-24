@@ -1,8 +1,9 @@
-package _01信息管理系统;
+package _02;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Student implements Comparable
+public class Student implements Serializable
 {
 	// 学号 名字 英语 数学 语文
 	// 10001 张三 98 34 89
@@ -11,15 +12,17 @@ public class Student implements Comparable
 	// 10004 赵六 87 86 75
 	// 10005 小乔 29 100 98
 	// 10006 曹操 87 65 100
-	long num;
+	int num;
 	String name;
 	int english;
 	int math;
 	int chinese;
-	Scanner sc = new Scanner(System.in);
-	public Student( String name, int english, int math, int chinese)
+	int sum ;
+	
+	public Student(int num, String name, int english, int math, int chinese)
 	{
 		super();
+		this.num = num;
 		this.name = name;
 		this.english = english;
 		this.math = math;
@@ -34,22 +37,9 @@ public class Student implements Comparable
 	public String toString()
 	{
 		return num + ", 姓名" + name + ", 英语成绩" + english + ", 数学成绩" + math + ", 语文成绩"
-				+ chinese ;
+				+ chinese + ", 总分"+(sum = english + math + chinese );
 	}
-	@Override
-	public int compareTo(Object a)
-	{
-		Student stu = (Student)a;
-		int sum = this.math+this.chinese+this.english;
-		int sum1 = stu.math+stu.english+stu.chinese;
-		if(sum<sum1)
-		{
-			return -1;
-		}else if(sum>sum1)
-		{
-			return 1;
-		}return 0;
-	}
+
 
 	
 }

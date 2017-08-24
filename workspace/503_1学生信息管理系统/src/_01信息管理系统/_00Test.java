@@ -1,21 +1,24 @@
 package _01信息管理系统;
 
 import java.util.*;
+import java.io.*;
 
 public class _00Test
 {
-	static Map<Long,Student> m = new HashMap<>();
+	static Map<Long,Student> m = new HashMap() ;
+	static LinkedList<Student> stu ;
 	static Scanner sc = new Scanner(System.in);
+	static final String PATH = "f:\\aa.txt";
 	public static void main(String[] args)
 	{
 
-		m.put(10001l, new Student("张三",98,34,89));
-		m.put(10002l, new Student("李四",97,54,79));
-		m.put(10003l, new Student("王五",56,90,99));
-		m.put(10004l, new Student("赵六",100,84,81));
-		m.put(10005l, new Student("赵云",98,49,82));
-		m.put(10006l, new Student("小乔",98,99,89));
-		
+//		m.put(10001l, new Student("张三",98,34,89));
+//		m.put(10002l, new Student("李四",97,54,79));
+//		m.put(10003l, new Student("王五",56,90,99));
+//		m.put(10004l, new Student("赵六",100,84,81));
+//		m.put(10005l, new Student("赵云",98,49,82));
+//		m.put(10006l, new Student("小乔",98,99,89));
+//		
 		// 2. 编写学生程序管理系统2.0，采用集合容器
 		// 学号 名字 英语 数学 语文
 		// 10001 张三 98 34 89
@@ -33,7 +36,91 @@ public class _00Test
 		// 4.2 查询补考名单
 		// 4.3 查询不需要补考名单
 		// 4.4 按照总分列出学生
+		read();
+		showMenu();
 		
+
+
+
+	}
+	
+	public static void save()
+	{
+		ObjectOutputStream out = null;
+		try
+		{
+			out = new ObjectOutputStream(new FileOutputStream(PATH));
+			out.writeObject(m);
+		} catch (FileNotFoundException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void read()
+	{
+		ObjectInputStream in = null;
+		try
+		{
+			in = new ObjectInputStream(new FileInputStream(PATH));
+			m = (Map<Long, Student>) in.readObject();
+			
+		}  catch (ClassNotFoundException e)
+		{
+			// TODO Auto-generated catch block
+			System.out.println("存档数据异常");
+		}
+		catch (FileNotFoundException e)
+		{
+			// TODO Auto-generated catch block
+			File f = new File(PATH);
+			try
+			{
+				f.createNewFile();
+			} catch (IOException e1)
+			{
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+//			System.out.println("文档路径错误");
+		} catch (IOException e)
+		{
+//			 TODO Auto-generated catch block
+			System.out.println("文档为空");
+		}
+		finally
+		{
+			
+			if(in != null)
+			{
+				try
+				{
+					in.close();
+				} catch (IOException e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			System.out.println(m);
+			for(Long i:m.keySet())
+			{
+				System.out.println(""+i+m.get(i));
+			}
+					
+		}
+		
+	}
+	
+
+
+	public static void showMenu()
+	{
 		while(true)
 		{
 			System.out.println("请选择你要的操作：1 添加学生信息  2修改学生信息 3删除学生 4 查询");
@@ -58,21 +145,23 @@ public class _00Test
 				}
 			}
 		}
-
-
-
 	}
 	// 提供一下交互功能
 	// 1. 添加学生
 	public static void add()
 	{
-		System.out.print("输入学号，姓名，英语成绩，数学成绩，语文成绩，中间以空格键隔开：");
+		System.out.print("输入学号，姓名，英语成绩，数学成绩，语文成绩：");
 		long n = sc.nextLong();
+		System.out.println("输入姓名");
 		String na = sc.next();
+		System.out.println("输入英语成绩");
 		int e = sc.nextInt();
-		int m = sc.nextInt();
+		System.out.println("输入数学成绩");
+		int ma = sc.nextInt();
+		System.out.println("输入语文成绩");
 		int c = sc.nextInt();
-		_00Test.m.put(n, new Student(na,e,m,c));
+		m.put(n, new Student(na,e,ma,c));
+		save();
 	}
 	// 2. 修改学生信息
 	public static void change()
