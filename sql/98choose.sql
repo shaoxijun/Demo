@@ -43,8 +43,9 @@ CREATE TABLE choose(
 	choose_no INT PRIMARY KEY AUTO_INCREMENT,
 	student_no INT NOT NULL,
 	course_no INT NOT NULL,
-	choose_time DATETIME,
 	score TINYINT UNSIGNED,
+	choose_time DATETIME,
+	
 	-- 外键约束
 	CONSTRAINT choose_student_fk FOREIGN KEY(student_no) REFERENCES student(student_no),
 	CONSTRAINT choose_course_fk FOREIGN KEY(course_no) REFERENCES course(course_no)

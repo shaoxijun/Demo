@@ -19,7 +19,10 @@ public class MyServer extends JFrame
 		build();
 		actionlistener();
 	}
-	
+	public void showtext()
+	{
+		
+	}
 	private void actionlistener()
 	{
 		// TODO Auto-generated method stub
@@ -77,8 +80,6 @@ public class MyServer extends JFrame
 		scrollPane.setBounds(5, 5, 300, 400);
 		p.add(scrollPane);
 	}
-
-
 
 	public static void main(String[] args)
 	{
