@@ -62,14 +62,58 @@ WHERE student.student_no = choose.student_no
 AND student.student_no = 2012001
 AND choose.course_no = course.course_no;
 -- 2. 统计每个学生选修多少课程,最高分、最低分、总分、平均成绩 (分组统计）
-SELECT COUNT(ch.course_no) 选修门数,s.student_name 学生姓名,MAX(ch.score) 最高分,MIN(ch.score) 最低分,SUM(ch.score) 总计,AVG(ch.score) 平均分
-FROM student s,choose ch,course co
-WHERE s.student_no = ch.student_no
-GROUP BY ch.choose_no HAVING BY COUNT(co.course_no)>1;
--- 搞不定
-
+SELECT  COUNT(*) 选修门数, GROUP_CONCAT(course.coruse_name) 选修课程,s.student_name 学生姓名,MAX(ch.score) 最高分,MIN(ch.score) 最低分,SUM(ch.score) 总计,AVG(ch.score) 平均分
+FROM choose ch,student s ,course WHERE s.student_no = ch.student_no AND ch.course_no = course.course_no
+GROUP BY s.student_name;
 -- 3. 检索平均成绩高于70分 的 学生信息及平均成绩 (分组统计 及having条件)
 SELECT AVG(ch.score),s.student_name 
 FROM choose ch, student s
 WHERE ch.student_no = s.student_no
 GROUP BY s.student_no HAVING AVG(ch.score)>70;
+-- 4. 检索显示学生的所有选修课程的成绩，条件是成绩要比张三的平均成绩高的才显示. (使用子查询)
+SELECT s.student_name,co.coruse_name,ch.score FROM student s,choose ch,course co
+WHERE s.student_no = ch.student_no
+AND ch.course_no = co.course_no
+AND ch.score> (SELECT AVG(score) FROM student,choose WHERE student.student_name = '张三');
+-- 5. 给定一个学生如2012001显示该生选修了哪几门课，这门课老师是谁，电话多少
+SELECT student.student_name,GROUP_CONCAT(course.coruse_name),GROUP_CONCAT(teacher.teacher_name),GROUP_CONCAT(teacher.teacher_contact)
+FROM student,choose,course,teacher
+WHERE student.student_no = choose.student_no
+AND student.student_no = 2012001
+AND choose.course_no = course.course_no
+AND course.teacher_no = teacher.teacher_no;
+
+SELECT s.student_name,co.coruse_name,te.teacher_name,te.teacher_contact
+FROM student s,choose ch,course co,teacher te
+WHERE ch.student_no = s.student_no
+AND ch.course_no = co.course_no
+AND co.teacher_no = te.teacher_no
+AND s.student_no = 2012001
+GROUP BY co.coruse_name;
+-- 6. 给定一门课程，如course_no = 1,统计哪些学生选修了这门课，结果排序先按院系再按班级再按学号
+SELECT s.student_name,co.coruse_name
+FROM student s,course co,class cl,choose ch
+WHERE s.student_no = ch.student_no
+AND cl.class_no = s.class_no
+AND ch.course_no = co.course_no
+AND co.course_no=1
+ORDER BY cl.deaprtment_name,cl.class_name,s.student_no;
+-- 7. 检索所有学生、老师姓名与联系方式 union 合并结果集
+SELECT student.student_name 姓名,student.student_contact 联系方式 FROM student
+UNION
+SELECT teacher.teacher_name,teacher.teacher_contact FROM teacher;
+-- *8. 统计哪些课程已报满,choosecourse up_limit
+SELECT co.coruse_name,COUNT(*)
+FROM course co,choose ch
+WHERE ch.course_no = co.course_no
+GROUP BY co.coruse_name;
+
+
+-- *9. 统计选修人数少于30人的课程信息
+SELECT course.coruse_name
+FROM course,choose
+
+-- *10. 统计每一门课程有多少人选修，还能提供多少人选修
+
+
+
