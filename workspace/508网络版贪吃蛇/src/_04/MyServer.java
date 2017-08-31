@@ -19,54 +19,15 @@ public class MyServer extends JFrame
 		build();
 		actionlistener();
 	}
-	public void showtext()
+	public void showtext(String s)
 	{
-		
+		text.setText(text.getText()+s+"\r\n");
 	}
 	private void actionlistener()
 	{
 		// TODO Auto-generated method stub
-		this.addKeyListener(new KeyListener()
-		{
-			
-			@Override
-			public void keyTyped(KeyEvent e)
-			{}
-			
-			@Override
-			public void keyReleased(KeyEvent e)
-			{}
-			
-			@Override
-			public void keyPressed(KeyEvent e)
-			{
-				// TODO Auto-generated method stub
-				new Thread(new Runnable()
-				{
-					
-					@Override
-					public void run()
-					{
-						// TODO Auto-generated method stub
-						switch (e.getKeyCode()) {
-						case KeyEvent.VK_LEFT:
-							diraction = 'a';
-							break;
-						case KeyEvent.VK_RIGHT:
-							diraction = 'd';
-							break;
-						case KeyEvent.VK_UP:
-							diraction = 'w';
-							break;
-						case KeyEvent.VK_DOWN:
-							diraction = 's';
-							break;
-						}
-					}
-				}).start();;
-			}
-		});
-	}
+		
+	}	
 
 	private void build()
 	{
