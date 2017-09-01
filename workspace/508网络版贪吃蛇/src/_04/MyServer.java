@@ -12,7 +12,9 @@ public class MyServer extends JFrame
 	JPanel p = new JPanel();
 	JTextArea text = new JTextArea();
 	char diraction;
-	
+	ServerSocket ss = null;
+	Socket cs = null;
+	int PORT = 8888;
 	
 	public MyServer()
 	{
@@ -26,9 +28,58 @@ public class MyServer extends JFrame
 	private void actionlistener()
 	{
 		// TODO Auto-generated method stub
-		
+		try
+		{
+			ss = new ServerSocket(PORT);
+			showtext("等待客户端连接");
+		} catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			showtext("客户端连接失败");
+		}
+		while(true)
+		{
+			try
+			{
+				cs = ss.accept();
+				showtext("客户端连接成功");
+				showtext("IP地址"+cs.getInetAddress().getHostAddress()+"端口号"+cs.getPort());
+			} catch (IOException e)
+			{
+				// TODO Auto-generated catch block
+//				e.printStackTrace();
+				showtext("客户端连接失败");
+			}
+			Thread tt = new Thread(new serverThread(cs));
+			tt.start();
+		}
 	}	
+	
+	private class serverThread implements Runnable
+	{
+		Socket cs = null;
+		ObjectOutputStream out = null;
+		ObjectInputStream in = null;
+				
+		public serverThread(Socket cs)
+		{
+			// TODO Auto-generated constructor stub
+			this.cs = cs;
+		}
 
+		@Override
+		public void run()
+		{
+			// TODO Auto-generated method stub
+			//接收
+			
+			//发送
+			
+		}
+		
+	}
+	
 	private void build()
 	{
 		// TODO Auto-generated method stub
